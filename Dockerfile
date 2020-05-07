@@ -32,6 +32,7 @@ RUN wget -qO- https://deb.nodesource.com/setup_13.x | bash - && \
 #    chmod +x install_rustup.sh && \
 #    bash install_rustup.sh
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+RUN apt-get install -y gdbserver
 CMD ["/bin/bash"]
 
-LABEL Name=42imagebase Version=0.0.1
+LABEL Name=visv/42imagebase Version=0.0.1
